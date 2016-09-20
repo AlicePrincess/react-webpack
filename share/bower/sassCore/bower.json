@@ -1,0 +1,33 @@
+{
+  "name": "sassCore",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zhuowenli/bower-sassCore",
+  "description": "Bower package for sassCore",
+  "authors": [
+    "Zhuo Wenli <531840344@qq.com>"
+  ],
+  "main": "./_base.scss",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "sass",
+    "scss",
+    "sassCore",
+    "reset",
+    "media",
+    "mixin",
+    "grid",
+    "css3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuowenli/bower-sassCore"
+  }
+}

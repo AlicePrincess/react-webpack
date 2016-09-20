@@ -1,0 +1,22 @@
+$font-color-0: #a5a7aa;
+
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+.u-normal-btn{
+	background: none;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 14px;
+	font-weight: 600;
+	outline: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-appearance: none;
+	cursor: pointer;
+}

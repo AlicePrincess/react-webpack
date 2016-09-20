@@ -1,0 +1,123 @@
+@import "./common";
+@include animate-flipInYa;
+:local(.root){
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    .unloaded-image {
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+    }
+    .tall-image {
+        width: 100%;
+        height: auto;
+        filter: blur(15px);
+        visibility: visible;
+    }
+    .wide-image {
+        height: 100%;
+        width: auto;
+        filter: blur(15px);
+        visibility: visible;
+    }
+    canvas {
+        height: 800px;
+    }
+    .inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        &:first-child {
+            opacity: 1;
+        }
+        &:last-child {
+            opacity: 0;
+        }
+    }
+    .hide{
+        display: none;
+    }
+    figure,
+    section {
+        display: block;
+        background: $colorLight;
+        width: 93%;
+
+        position: relative;
+        margin-top:-5%;
+    }
+    @media screen and (orientation: landscape) {
+        figure,
+        section {
+            width: 35%;
+        }
+    }
+    figure{
+        @include gradient-vertical(rgba(255, 255, 255, 0.9) 0,rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255,1) 100%);
+        padding:2px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        img {
+            width: 100%;
+            height:280px;
+        }
+
+      }
+
+
+    img.blur{
+      height:100%;
+      width: 100%;
+    }
+    figcaption {
+      display: block;
+      width: 100%;
+        line-height: 3;
+        position: relative;
+        z-index: 100;
+    }
+    section{
+        border-radius: .5rem;
+    }
+    h3 {
+        margin: 2.9% 0 0;
+        font-size:3.4rem;
+        @include opacity(80);
+    }
+    hr {
+        margin: 0 5%;
+        height: 0;
+        border: none;
+        border-bottom: 1px $colorDark solid;
+        @include opacity(12);
+    }
+    time {
+        position: absolute;
+        right: 5%;
+        top: 7.5%;
+        font-size: 2.4rem;
+        color: $colorDark;
+        @include opacity(30);
+    }
+    p {
+        color: $colorDark;
+        @include opacity(60);
+        padding: 8% 7%;
+        font-size: 3rem;
+        line-height: 1.75;
+    }
+}

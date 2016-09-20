@@ -1,0 +1,113 @@
+@import "./common.scss";
+
+:local(.root) {
+    width: 100%;
+    height: 100%;
+    .blackboard {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../public/images/countdown/blackboard.png');
+        filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+        -moz-background-size: 100% 100%;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 43.8vh;
+        .info{
+            position: absolute;
+            left: 3.5vw;
+            bottom: 3.5vw;
+            width: auto;
+            height: auto;
+            p {
+                color: rgba(255,255,255,0.7);
+                font-size: 3.5vw;
+                line-height: 6vw;
+                font {
+                    padding-bottom: 0.1vw;
+                    border-bottom: 1px solid rgba(255,255,255,0.7);
+                }
+            }
+        }
+        .countdown{
+            font-size: 32vw;
+            font-family: "PingFang SC";
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            position: relative;
+            top: 12vw;
+            height: 35vw;
+            overflow: hidden;
+        }
+
+    }
+    .text {
+        z-index: 2;
+        position: absolute;
+        height: 56.2vh;
+        background-color: #fffbef;
+        top: 43.8vh;
+        padding-top: 4vh;
+        img{
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+        }
+    }
+}
+@keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0,0);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+@-moz-keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0,0);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+@-webkit-keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0,0);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+@-o-keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0,0);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+@media all and (orientation : landscape) {
+    :local(.root) {
+        .text {
+            height: 150%;
+        }
+    }
+}

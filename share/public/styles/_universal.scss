@@ -1,0 +1,30 @@
+#app {
+    height: 100%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.tall-image {
+    width: 100%;
+    height: auto;
+}
+
+.wide-image {
+    height: 100%;
+    width: auto;
+}
+
+.u-clearfix:after,
+.u-clearfix:before {
+    display: table;
+    content: " "
+}
+.u-clearfix:after {
+    clear: both
+}
+
+.full-height {
+    height: 100%;
+}

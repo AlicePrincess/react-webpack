@@ -1,0 +1,13 @@
+@import "./common.scss";
+
+:local(.version){
+	z-index: 100;
+	position: fixed;		
+	bottom: 1vh;
+	left: 50%;
+	width: auto;
+	height: auto;
+	font-size: 1.1vh;
+	color: rgba(0, 0, 0, .5);
+	@include transform(translate(-50%, 0%));
+}

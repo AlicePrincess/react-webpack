@@ -1,0 +1,6 @@
+.idea/
+node_modules/
+dist/
+deploy.sh
+npm-debug.log
+.DS_Store

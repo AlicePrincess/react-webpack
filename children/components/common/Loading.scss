@@ -1,0 +1,32 @@
+@import "./../../containers/common.scss";
+:local(.loading) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 2vw 4vw 3vw;
+  width: 100vw;
+  overflow-x: hidden;
+  height: auto;
+  min-height: 100%;
+  // display: block;
+  text-align: center;
+  background: rgba(0,0,0,.8);
+  @include justify-content(space-around);
+  figure{
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0px 10px 5px rgba(0, 0, 0, .08);
+    -webkit-box-shadow: 0 0px 10px 5px rgba(0, 0, 0, .08);
+    -moz-box-shadow: 0 0px 10px 5px rgba(0, 0, 0, .08);
+    padding:5vw;
+    img{
+      width: 100%;
+    }
+    figcaption{
+      color: rgba(0,0,0,.8);
+      line-height: 5vh;
+      font-size:2.5vh;
+      margin: 5vw 0 3vw;
+    }
+  }
+}

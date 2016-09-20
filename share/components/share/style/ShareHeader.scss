@@ -1,0 +1,39 @@
+@import "./common";
+:local(.root) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 2.5%;
+  @include gradient-vertical(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 100%);
+  color: $colorLight;
+  @include clearfix;
+  img {
+    width: 11%;
+    // width: 8rem;
+    // height: 8rem;
+    @include float;
+    border-radius: 8rem;
+    border: 1px $colorLight solid;
+    margin-right: 5%;
+    vertical-align: middle;
+  }
+  p {
+    @include float;
+    font-size: 2.6rem;
+    b {
+      font-size: 3.4rem;
+      font-weight: normal;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+    :local(.root) {
+        padding: 1.5% 2.5%;
+        img {
+            width: 7%;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import "./common.scss";
+:local(.root){
+  width:100vw;
+  height:140vw;
+  text-align: center;
+  figure{
+    display: block;
+    height: 150vw;
+    position: relative;
+    margin-top: 16vw;
+    .headimgurl{
+      width:20vw;
+      height:20vw;
+      margin-top: 35vw;
+    }
+    .bg{
+      width:100vw;
+      height:auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  p{
+    color: #e98f40;
+    line-height: 7vw;
+  }
+}

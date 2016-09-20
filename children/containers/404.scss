@@ -1,0 +1,30 @@
+@import "./common.scss";
+:local(.page404) {
+  background: #fff;
+  height: auto;
+  min-height: 100%;
+  text-align: center;
+  @include justify-content(space-around);
+  figure{
+    width:100vw;
+    span{
+      font-size: 12vw;
+      color: #f78015;
+    }
+    figcaption{
+      color: rgba(0,0,0,.8);
+      line-height: 5vh;
+      font-size:2vh;
+      margin: 5vw 0 3vw;
+    }
+  }
+  .bg{
+    width:100vw;
+    height:auto;
+    display: block;
+    text-align: right;
+    img{
+      width:75vw;
+    }
+  }
+}

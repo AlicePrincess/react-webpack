@@ -1,0 +1,48 @@
+@import "../../../bower_components/sassCore/base";
+$colorLight:#fff;
+$colorDark:#000;
+$itemSize:320px;
+$spacing:10px;
+$colorDefault:rgba(0,0,0,.8);
+$colorDefaultLight:rgba(255,255,255,.8);
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+%flex {
+    @include flex;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transition($transitions) {
+    -moz-transition: $transitions;
+    -o-transition: $transitions;
+    -ms-transition: $transitions;
+    -webkit-transition: $transitions;
+    transition: $transitions;
+}

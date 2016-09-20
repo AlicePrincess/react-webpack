@@ -1,0 +1,258 @@
+@import "./common.scss";
+
+:local(.container){
+	position: relative;
+	background: rgba(255, 0, 0, 0);
+	height: 100%;
+
+	:local(.bgGauss){
+		filter: blur(60px);
+		-webkit-filter: blur(50px);
+		opacity: .4;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		right: 0;
+		z-index: 0;
+	}
+	:local(.bgTransparent){
+		background-color: rgba(255, 255, 255, .4);
+		left: 0;
+		position: fixed;
+		right: 0;
+		z-index: 1;
+	}
+
+	@include justify-content(flex-start);
+
+	:local(.progress){
+		width: auto;
+		height: auto;
+		margin-top: 2.1vh;
+		margin-bottom: 3.8vh;
+		font-size: 2.1vh;
+		color: rgba(0, 0, 0, .6);
+		font-weight: 400;
+		text-align: center;
+		z-index: 2;
+	}
+	:local(.cardContainer){
+		z-index: 2;
+		width: 90%;
+		height: 43vh;
+		margin: auto;
+		margin-top: 0;
+		margin-bottom: 2.2vh;
+		font-size: 2.5vh;
+
+		:local(.grayQuestionCard){
+			background: #000;
+			opacity: 0.05;
+			position: absolute;
+			width: 95%;
+			margin: 0 2.5%;
+			top: -1.5vh;
+			z-index: 1;
+		}
+	}
+	:local(.flipTip){
+		@include align-self(center);
+		color: rgba(0, 0, 0, .2);
+		font-size: 1.8vh;
+		margin: 0;
+		font-weight: 400;
+		z-index: 2;
+		img{
+			vertical-align: middle;
+			height: 3vh;
+			margin-top: -0.5vh;
+		}
+	}
+	:local(.answerContainer){
+		width: 100%;
+		height: 37.5vh;
+		overflow: hidden;
+		font-size: 2.4vh;
+		margin-top: auto;
+		margin-bottom: auto;
+		z-index: 2;
+
+		@include align-content(center);
+		@include justify-content(center);
+
+		:local(.answerGroupContainer){
+			height: 92%;
+
+			:local(.answerGroup){
+				position: absolute;
+				height: 100%;
+				@include justify-content(center);
+				top: 0;
+				left: 0;
+				:local(.answerItem){
+					background-color: rgba(255, 255, 255, 0);
+					padding: 0 9vw;
+					@include flex-direction(row);
+					height: auto;
+					font-weight: 400;
+					padding-top: 1.2em;
+					padding-bottom: 1.2em;
+					position: relative;
+
+					span{
+						padding-top: 0.1em;
+						padding-left: 2em;
+					}
+					p{
+						position: absolute;
+						left: 50%;
+						width:70%;
+						text-align: center;
+						text-overflow: -o-ellipsis-lastline;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						-webkit-line-clamp: 1;
+						-webkit-box-orient: vertical;
+						@include transform(translate(-50%, 0));
+					}
+					:local(.canvas){
+						width: 7vh;
+						height: 7vh;
+						position: absolute;
+						left: 3.6vh;
+						top: 0.4vh;
+					}
+					:local(.underline){
+						border-bottom: .5px rgba(0, 0, 0, .2) solid;
+						position: absolute;
+						top: 0;
+						left: 0;
+						margin: 0 9vw;
+						width: 82vw;
+					}
+				}
+				:local(.lastAnswerItem){
+					:local(.underline){
+						border-width: 0;
+					}
+				}
+			}
+		}
+	}
+	:local(.backCardContainer){
+		z-index: 1;
+		@include transform(translate(-50%, -54%) scale(0.95));
+
+		:local(.flipTip){
+			opacity: 0,
+		}
+	}
+}
+
+:local(.enterContainer){
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+// animations
+.examination-container-transition-group-appear {
+	opacity: 0;
+	@include transform(scale(0));
+
+	:local(.answerItem){
+		opacity: 0;
+		@include transform(scale(0));
+	}
+}
+.examination-container-transition-group-appear.examination-container-transition-group-appear-active {
+	opacity: 1;
+	@include transform(scale(1));
+	@include transition(all 450ms);
+
+	:local(.answerItem){
+		opacity: 1;
+		@include transform(scale(1));
+		&:nth-child(1){
+			@include transition(all 200ms 250ms);
+		}
+		&:nth-child(2){
+			@include transition(all 200ms 300ms);
+		}
+		&:nth-child(3){
+			@include transition(all 200ms 350ms);
+		}
+		&:nth-child(4){
+			@include transition(all 200ms 400ms);
+		}
+	}
+}
+
+
+.examination-container-transition-group-enter {
+	opacity: 0;
+	@include transform(scale(0));
+
+	:local(.answerItem){
+		opacity: 0;
+		@include transform(scale(0));
+	}
+}
+
+.examination-container-transition-group-enter.examination-container-transition-group-enter-active {
+	opacity: 1;
+	@include transform(scale(1));
+	@include transition(all 450ms);
+
+	:local(.answerItem){
+		opacity: 1;
+		@include transform(scale(1));
+		&:nth-child(1){
+			@include transition(all 200ms 250ms);
+		}
+		&:nth-child(2){
+			@include transition(all 200ms 300ms);
+		}
+		&:nth-child(3){
+			@include transition(all 200ms 350ms);
+		}
+		&:nth-child(4){
+			@include transition(all 200ms 400ms);
+		}
+	}
+}
+
+.examination-container-transition-group-leave {
+  opacity: 1;
+}
+
+.examination-container-transition-group-leave.examination-container-transition-group-leave-active {
+  opacity: 0;
+  @include transform(scale(1.4));
+  @include transition(all 300ms 100ms);
+}
+
+.examination-container-bg-transition-group-appear{
+	opacity: 0;
+}
+.examination-container-bg-transition-group-appear.examination-container-bg-transition-group-appear-active{
+	opacity: 1;
+	transition: opacity .3s ease-in;
+}
+.examination-container-bg-transition-group-enter{
+	opacity: 0;
+}
+.examination-container-bg-transition-group.examination-container-bg-transition-group-enter-active {
+	opacity: 1;
+	transition: opacity 300ms ease-in;
+}
+.examination-container-bg-transition-group-leave {
+	opacity: 1;
+}
+.examination-container-bg-transition-group-leave.examination-container-bg-transition-group-leave-active {
+	opacity: 0;
+	transition: opacity 300ms ease-in 100ms;
+}

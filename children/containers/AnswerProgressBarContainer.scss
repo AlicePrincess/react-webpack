@@ -1,0 +1,13 @@
+@import "./common.scss";
+
+:local(.progressBar){
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	div{
+		background-color: #35b353;
+	}
+	height: 4px;
+	width: 0;
+}

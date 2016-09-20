@@ -1,0 +1,9 @@
+@import "./../../containers/common.scss";
+
+:local(.container){
+	background-color: #fff;	
+	@include justify-content(center);
+	img{
+		@include align-self(center);
+	}
+}

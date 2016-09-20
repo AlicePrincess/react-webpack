@@ -1,0 +1,46 @@
+:local(.share) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 2vw 4vw 3vw;
+  width: 100vw;
+  overflow-x: hidden;
+  height: auto;
+  min-height: 100%;
+  // display: block;
+  z-index: 100;
+  text-align: center;
+  background: rgba(0,0,0,.8);
+  // i{
+  //   text-align: right;
+  //   height: 70vh;
+  //   padding:1vh 4vh;
+  //   svg{
+  //     height: 60vh;
+  //   }
+  // }
+
+  .share1{
+    width: 85%;
+    margin-left: 5%;
+    position: absolute;
+    top:0;
+    svg{
+      width: 100%;
+    }
+  }
+  .share{
+    width: 14vw;
+    position: absolute;
+    bottom:3vh;
+    right: 10vw;
+  }
+  p{
+    color: rgba(255,255,255,.8);
+    font-size:0.6em;
+    position: absolute;
+    right: 27vw;
+    bottom: 8vw;
+  }
+
+}

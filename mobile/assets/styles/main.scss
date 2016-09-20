@@ -1,0 +1,15 @@
+
+html,body{
+  height:100%;
+  width: 100%;
+}
+
+// Core variables and mixins
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+
+$body-bg:none;
+// Reset and dependencies
+@import "../../../node_modules/bootstrap/scss/normalize";
+@import "../../../node_modules/bootstrap/scss/reboot";

@@ -1,0 +1,128 @@
+@import "./common.scss";
+:local(.root) {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    align: center;
+    position: relative;
+    .score {
+        position: absolute;
+        width: 70%;
+        top: 30vw;
+        left: 15%;
+    }
+    .score1 {
+        position: absolute;
+        width: 80%;
+        top: 20vw;
+        left: 10%;
+    }
+    .headimgurl {
+        width: 15vw;
+        height: 15vw;
+        margin: 23vw auto auto;
+        position: relative;
+        z-index: 1;
+        left: -6vw;
+    }
+    .headimgurl1 {
+        width: 15vw;
+        height: 15vw;
+        margin: 37vw auto auto;
+        position: relative;
+        z-index: 1;
+        left: 25vw;
+        transform: rotate(25deg);
+        -ms-transform: rotate(25deg);		/* IE 9 */
+        -webkit-transform: rotate(25deg);	/* Safari and Chrome */
+        -o-transform: rotate(25deg);		/* Opera */
+        -moz-transform: rotate(25deg);
+    }
+
+
+    .score2 {
+        position: absolute;
+        width: 42%;
+        top: 10vw;
+        left: 29%;
+    }
+    .headimgurl2 {
+        width: 15vw;
+        height: 15vw;
+        margin: 33vw auto auto;
+        position: relative;
+        z-index: 1;
+        left: -6vw;
+    }
+    .score3 {
+        position: absolute;
+        width: 70%;
+        top: 30vw;
+        left: 15%;
+    }
+    .headimgurl3 {
+        width: 15vw;
+        height: 15vw;
+        margin: 23vw auto auto;
+        position: relative;
+        z-index: 1;
+        left: -6vw;
+    }
+    >p {
+        position: relative;
+        bottom: 28vw;
+        text-align: center;
+        font-size: 4vw;
+        color: rgb(247, 128, 21);
+    }
+    .footBar {
+        position: absolute;
+        bottom: 10vw;
+        @include flex-direction(row);
+        height: auto;
+
+        button{
+          width: 47.5%;
+          height: 10.5vw;
+          font-size: 3.8*1.2vw;
+          color: white;
+          outline: none;
+          border-radius: 3px;
+          font-family: "PingFang SC";
+          border: 0;
+          margin:0 3vw;
+      }
+        button:nth-child(1) {
+          // box-shadow: 0 2px 1px rgb(255, 3, 0);
+          border:.2vw rgb(255, 3, 0) solid;
+          border-bottom:2px rgb(255, 3, 0) solid;
+          background-image: -moz-linear-gradient( 90deg, rgb(255,77,77) 0%, rgb(255,134,92) 100%);
+          background-image: -webkit-linear-gradient( 90deg, rgb(255,77,77) 0%, rgb(255,134,92) 100%);
+          background-image: -ms-linear-gradient( 90deg, rgb(255,77,77) 0%, rgb(255,134,92) 100%);
+          text-shadow: 0px 2px 1px rgba(249, 64, 64, 0.75);
+        }
+        button:nth-child(2) {
+          // box-shadow: 0 2px 1px rgb(255, 114, 0);
+          border:.2vw rgb(255, 114, 0) solid;
+          border-bottom:2px rgb(255, 114, 0) solid;
+          background-image: -moz-linear-gradient( 90deg, rgb(240,144,50) 0%, rgb(248,187,42) 100%);
+          background-image: -webkit-linear-gradient( 90deg, rgb(240,144,50) 0%, rgb(248,187,42) 100%);
+          background-image: -ms-linear-gradient( 90deg, rgb(240,144,50) 0%, rgb(248,187,42) 100%);
+          text-shadow: 0px 2px 1px rgba(233, 118, 11, 0.75);
+        }
+
+
+
+        button{
+          width: 44%;
+          height: 10vw;
+          font-size: 4vw;
+          color: white;
+          outline: none;
+          border-radius: 3px;
+          font-family: "PingFang SC";
+          border: 0;
+      }
+
+    }
+}
